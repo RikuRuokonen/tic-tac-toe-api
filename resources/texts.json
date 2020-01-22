@@ -1,0 +1,14 @@
+{
+  "computerWin": "Computer won! Play again? Use /start api to start a new game",
+  "playerWin": "You won! Play again? Use /start api to start a new game",
+  "drawText": "Draw! Play again? Use /start api to start a new game",
+  "illegalMove": "Illegal move! Try something else.",
+  "yourTurn": "Your Turn",
+  "computerStarts": "Computer started, your turn. You play as O",
+  "playerStarts": "You start and play as X",
+  "gameNotYetStarted": "Game is not started. Use /start endpoint to start game",
+  "gameOngoing": "Game currently ongoing. Please use /reset endpoint to reset the current game first",
+  "noGameToReset": "No game to reset, use /start endpoint instead",
+  "xMark": "X",
+  "oMark": "O"
+}
