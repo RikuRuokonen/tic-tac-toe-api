@@ -46,6 +46,7 @@ Api has 4 endpoints
 - Move data to database
 - Add additional checks to request body
 - Add tests to validators
+- Proper error handling
 
 
 ## Contributing
