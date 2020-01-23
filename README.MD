@@ -35,6 +35,11 @@ Api has 4 endpoints
 - /api/reset
   Resets the game. Currently works exactly like start endpoint, but could be more easily expandable in future.
 
+## TODO
+
+-Move data to database
+-Add additional checks to request body
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
