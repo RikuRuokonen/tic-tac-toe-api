@@ -1,7 +1,6 @@
 const express = require('express');
 const { doPlayersMove, simulateComputerMove } = require('../game/gameLogic');
 const {
-  setupGame,
   isGameStarted,
   resetGame,
   getBoard,
@@ -15,7 +14,7 @@ const startGame = (req, res) => {
     res.status = status;
     res.send(resBody);
   };
-  setupGame(callback, simulateComputerMove);
+  resetGame(callback, simulateComputerMove);
 };
 
 const executeMove = (req, res) => {
@@ -40,6 +39,7 @@ const getStatus = (req, res) => {
   });
 };
 
+// Currently works exactly like /start endpoint, but may be extended to additinal functionality
 const reset = (req, res) => {
   const callback = (status, resBody) => {
     res.status = status;

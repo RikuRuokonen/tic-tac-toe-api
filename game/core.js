@@ -14,17 +14,20 @@ let playerMark = texts.xMark;
 // 1 = Human, 2 = computer
 let winner = null;
 
+const endGame = () => {
+  totalMoves = 0;
+  gameStarted = false;
+};
+
 // Setters & Getters
 const setWinner = (whoWon) => {
+  endGame();
   winner = whoWon;
 };
 
 const gameIsDraw = () => totalMoves === 9 && winner === null;
 
 const getWinner = () => {
-  if (!gameStarted) {
-    return 'No ongoing game';
-  }
   if (winner === 1) {
     return 'Player';
   }
@@ -33,6 +36,9 @@ const getWinner = () => {
   }
   if (gameIsDraw()) {
     return 'Draw';
+  }
+  if (!gameStarted) {
+    return 'No ongoing game';
   }
   return 'Game still ongoing';
 };
@@ -64,6 +70,7 @@ const layoutTransformation = (board) => {
 const setupGame = (responseCallback, simulateComputerMove) => {
   if (gameStarted !== true) {
     gameStarted = true;
+    winner = null;
     const startingPlayer = Math.round(Math.random()) + 1;
     if (startingPlayer === 1) {
       responseCallback(200, {
@@ -96,19 +103,10 @@ const resetBoard = () => {
   });
 };
 
-const endGame = () => {
-  totalMoves = 0;
-  gameStarted = false;
-};
-
 const resetGame = (responseCallback, simulateComputerMove) => {
-  if (gameStarted !== true) {
-    responseCallback(500, { message: texts.noGameToReset });
-  } else {
-    endGame();
-    resetBoard();
-    setupGame(responseCallback, simulateComputerMove);
-  }
+  endGame();
+  resetBoard();
+  setupGame(responseCallback, simulateComputerMove);
 };
 
 module.exports = {
