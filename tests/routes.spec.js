@@ -32,7 +32,6 @@ describe('Game-routes', () => {
           move: {
             row: 1,
             column: 1,
-            playerNumber: 1,
           },
         })
         .end((err, res) => {

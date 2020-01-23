@@ -26,7 +26,10 @@ const executeMove = (req, res) => {
   if (isGameStarted() !== true) {
     res.status(500).send({ message: texts.gameNotYetStarted });
   } else {
-    doPlayersMove(body.move, callback);
+    doPlayersMove({
+      ...body.move,
+      playerNumber: 1,
+    }, callback);
   }
 };
 
