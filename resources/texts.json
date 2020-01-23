@@ -9,6 +9,7 @@
   "gameNotYetStarted": "Game is not started. Use /start endpoint to start game",
   "gameOngoing": "Game currently ongoing. Please use /reset endpoint to reset the current game first",
   "noGameToReset": "No game to reset, use /start endpoint instead",
+  "requestNotValid": "Request not valid. Try something else.", 
   "xMark": "X",
   "oMark": "O"
 }

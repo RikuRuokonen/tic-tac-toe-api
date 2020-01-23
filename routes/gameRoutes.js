@@ -7,6 +7,7 @@ const {
   getWinner,
 } = require('../game/core');
 const texts = require('../resources/texts');
+const { validRequest } = require('../utils/validators');
 
 
 const startGame = (req, res) => {
@@ -23,7 +24,9 @@ const executeMove = (req, res) => {
     res.status = status;
     res.send(resBody);
   };
-  if (isGameStarted() !== true) {
+  if (!validRequest(req)) {
+    res.status(500).send({ message: texts.requestNotValid });
+  } else if (isGameStarted() !== true) {
     res.status(500).send({ message: texts.gameNotYetStarted });
   } else {
     doPlayersMove({
