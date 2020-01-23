@@ -39,6 +39,7 @@ Api has 4 endpoints
 
 -Move data to database
 -Add additional checks to request body
+-Add tests to validators
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
