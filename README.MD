@@ -20,8 +20,10 @@ Use Postman/Insomnia/similar software to ping api
 Api has 4 endpoints
 
 - /api/start:
+
   Starts new game
 - /api/do-move
+
   After starting the game, you can use this endpoint to actually place X/O to 2D-array.
   Example of JSON-body of the request:
   {
@@ -33,8 +35,10 @@ Api has 4 endpoints
   Moves start from 0, it being the first row/column and 2 being the last one.
   Example request places mark in center of board.
 - /api/status
+
   Returns status of current game
 - /api/reset
+
   Resets the game. Currently works exactly like start endpoint, but could be more easily expandable in future.
 
 ## TODO
