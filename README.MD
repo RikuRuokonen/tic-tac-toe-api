@@ -16,7 +16,9 @@ Add .env file with "PORT" key and desired value. App should run on localhost:{PO
 ## Usage
 
 Use Postman/Insomnia/similar software to ping api
+
 Api has 4 endpoints
+
 - /api/start:
   Starts new game
 - /api/do-move
