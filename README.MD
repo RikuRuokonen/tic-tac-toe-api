@@ -5,11 +5,11 @@ Tic-Tac-Toe-Api is web-api for playing tic-tac-toe
 ## Installation
 
 Clone repository
-From the reppository, use the package manager NPM to install dependencies.
+From the repository, use the package manager NPM to install dependencies.
 
 ```bash
 npm install
-nodemon index.js
+npm start
 ```
 Add .env file with "PORT" key and desired value. App should run on localhost:{PORT}. Env.sample file should help you.
 
