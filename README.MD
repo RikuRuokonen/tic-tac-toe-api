@@ -28,6 +28,7 @@ Api has 4 endpoints
       "column": "1"
     }
   }
+  Moves start from 0, it being the first row/column and 2 being the last one.
   Example request places mark in center of board.
 - /api/status
   Returns status of current game
