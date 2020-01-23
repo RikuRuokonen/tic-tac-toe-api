@@ -1,6 +1,12 @@
 const express = require('express');
 const { doPlayersMove, simulateComputerMove } = require('../game/gameLogic');
-const { setupGame, isGameStarted, resetGame } = require('../game/core');
+const {
+  setupGame,
+  isGameStarted,
+  resetGame,
+  getBoard,
+  getWinner,
+} = require('../game/core');
 const texts = require('../resources/texts');
 
 
@@ -25,6 +31,15 @@ const executeMove = (req, res) => {
   }
 };
 
+const getStatus = (req, res) => {
+  const board = getBoard();
+  const winner = getWinner();
+  res.status(200).send({
+    board,
+    winner,
+  });
+};
+
 const reset = (req, res) => {
   const callback = (status, resBody) => {
     res.status = status;
@@ -36,6 +51,7 @@ const reset = (req, res) => {
 const router = express.Router();
 router.use('/start', startGame);
 router.use('/do-move', executeMove);
+router.use('/status', getStatus);
 router.use('/reset', reset);
 
 module.exports = router;
