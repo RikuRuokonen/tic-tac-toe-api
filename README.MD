@@ -23,11 +23,9 @@ Api has 4 endpoints
   After starting the game, you can use this endpoint to actually place X/O to 2D-array.
   Example of JSON-body of the request:
   {
-    {
-      "move": {
-        "row": "1",
-        "column": "1",
-      }
+    "move": {
+      "row": "1",
+      "column": "1"
     }
   }
   Example request places mark in center of board.
