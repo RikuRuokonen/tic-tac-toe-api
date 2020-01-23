@@ -19,9 +19,23 @@ const setWinner = (whoWon) => {
   winner = whoWon;
 };
 
-const getWinner = () => winner;
+const gameIsDraw = () => totalMoves === 9 && winner === null;
 
-const gameIsDraw = () => totalMoves === 9;
+const getWinner = () => {
+  if (!gameStarted) {
+    return 'No ongoing game';
+  }
+  if (winner === 1) {
+    return 'Player';
+  }
+  if (winner === 2) {
+    return 'Computer';
+  }
+  if (gameIsDraw()) {
+    return 'Draw';
+  }
+  return 'Game still ongoing';
+};
 
 const getBoard = () => Board;
 
