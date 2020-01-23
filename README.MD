@@ -11,7 +11,7 @@ From the reppository, use the package manager NPM to install dependencies.
 npm install
 nodemon index.js
 ```
-Add .env file with "PORT" key and desired value. App should run on localhost:{PORT}.
+Add .env file with "PORT" key and desired value. App should run on localhost:{PORT}. Env.sample file should help you.
 
 ## Usage
 
