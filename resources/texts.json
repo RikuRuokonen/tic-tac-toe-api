@@ -1,6 +1,6 @@
 {
-  "computerWin": "Computer won! Play again? Use /start api to start a new game",
-  "playerWin": "You won! Play again? Use /start api to start a new game",
+  "computerWon": "Computer won! Play again? Use /start api to start a new game",
+  "playerWon": "You won! Play again? Use /start api to start a new game",
   "drawText": "Draw! Play again? Use /start api to start a new game",
   "illegalMove": "Illegal move! Try something else.",
   "yourTurn": "Your Turn",
